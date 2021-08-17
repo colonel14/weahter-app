@@ -1,0 +1,116 @@
+.city__search {
+  position: relative;
+  &-input {
+    width: 50vw;
+    position: relative;
+    input {
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+
+      box-shadow: 0 0 2rem rgb(0 0 255 / 10%);
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 90px;
+      width: 90px;
+      background: #00ff9b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 2rem;
+
+      cursor: pointer;
+    }
+  }
+
+  &-menu {
+    width: 50vw;
+    position: absolute;
+    top: 95%;
+    z-index: 55;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    &.active {
+      overflow: visible;
+      height: auto;
+    }
+    ul {
+      list-style: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 2rem rgb(0 0 255 / 10%);
+      li {
+        border-bottom: 1px solid #eee;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        justify-content: space-between;
+        i {
+          width: 30px;
+          height: 30px;
+          background: #131635;
+          border-radius: 50%;
+          line-height: 30px;
+          text-align: center;
+          color: #fff;
+        }
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .city__search-input {
+      width: 90vw;
+      input {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+      i {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+      }
+    }
+    .city__search-menu {
+      width: 90vw;
+      li {
+        padding: 1.1rem;
+      }
+    }
+  }
+  @media (min-width: 600px) and (max-width: 1199px) {
+    .city__search-input {
+      width: 60vw;
+      input {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+      i {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+      }
+    }
+    .city__search-menu {
+      width: 60vw;
+      li {
+        padding: 1.2rem;
+      }
+    }
+  }
+}

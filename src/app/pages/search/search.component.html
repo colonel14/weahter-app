@@ -1,0 +1,20 @@
+<div class="city__search">
+  <div class="city__search-input">
+    <input
+      type="text"
+      placeholder="search city"
+      (click)="toggleActive()"
+      (keyup.enter)="onSubmit(input.value)"
+      #input
+    />
+    <i class="fas fa-search" (click)="onSubmit(input.value)"></i>
+  </div>
+  <div class="city__search-menu">
+    <ul>
+      <li *ngFor="let city of cities">
+        <span>{{ city }}</span>
+        <i class="fas fa-plus" (click)="onSubmit(city); toggleActive()"></i>
+      </li>
+    </ul>
+  </div>
+</div>

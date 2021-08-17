@@ -1,0 +1,29 @@
+<div class="weather__card">
+  <h2 class="city__name">{{ weatherItem.cityName }}</h2>
+  <div class="weather__icon" [ngSwitch]="weatherItem.weatherCondition">
+    <img
+      src="../../../assets/weather-icon/cloudy.svg"
+      *ngSwitchCase="'Clouds'"
+    />
+    <img src="../../../assets/weather-icon/rainy.svg" *ngSwitchCase="'Rain'" />
+    <img src="../../../assets/weather-icon/snowy.svg" *ngSwitchCase="'Snowy'" />
+    <img src="../../../assets/weather-icon/sunny.svg" *ngSwitchCase="'Clear'" />
+    <img src="../../../assets/weather-icon/mist.svg" *ngSwitchCase="'Mist'" />
+  </div>
+  <div class="weather__tmp">
+    <span class="tmp-text">{{ weatherItem.temprature }}°</span>
+    <span class="weather-condition">{{ weatherItem.weatherCondition }}</span>
+  </div>
+  <div class="min-max__tmp">
+    <div class="min">
+      <i class="fas fa-caret-down arrow-down"></i>
+      <span class="min-tmp_value">{{ weatherItem.minTmp }}</span>
+      <span class="min-text">MIN</span>
+    </div>
+    <div class="max">
+      <i class="fas fa-caret-up arrow-up"></i>
+      <span class="max-tmp_value">{{ weatherItem.maxTmp }}</span>
+      <span class="max-text">MAX</span>
+    </div>
+  </div>
+</div>
