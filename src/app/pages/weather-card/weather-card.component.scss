@@ -11,6 +11,10 @@
   grid-template-rows: repeat(3, 1fr);
   box-shadow: 0 0 2rem rgb(0 0 255 / 10%);
   animation: slideUp 0.5s ease-in-out;
+  &.dark {
+    background: #000;
+    color: #fff;
+  }
   .weather__icon {
     img {
       width: 15rem;

@@ -8,4 +8,8 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+  &.dark {
+    background: #1d1d44;
+  }
 }

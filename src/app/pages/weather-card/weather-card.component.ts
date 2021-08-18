@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeatherItem } from '../weather-item';
-
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
@@ -8,7 +7,8 @@ import { WeatherItem } from '../weather-item';
 })
 export class WeatherCardComponent implements OnInit {
   @Input('item') weatherItem: WeatherItem;
+  isDark: boolean;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 }

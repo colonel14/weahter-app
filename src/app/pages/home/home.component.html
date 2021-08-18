@@ -1,6 +1,9 @@
 <div class="home__container">
-  <app-weather-card
-    *ngFor="let weatherItem of weatherItems"
-    [item]="weatherItem"
-  ></app-weather-card>
+  <app-search></app-search>
+  <div class="home__card-container">
+    <app-weather-card
+      *ngFor="let weatherItem of weatherItems"
+      [item]="weatherItem"
+    ></app-weather-card>
+  </div>
 </div>

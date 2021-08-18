@@ -1,4 +1,4 @@
-<div class="weather__card">
+<div [ngClass]="{ dark: isDark }" class="weather__card">
   <h2 class="city__name">{{ weatherItem.cityName }}</h2>
   <div class="weather__icon" [ngSwitch]="weatherItem.weatherCondition">
     <img

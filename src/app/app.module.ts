@@ -8,6 +8,7 @@ import { WeatherCardComponent } from './pages/weather-card/weather-card.componen
 import { CitiesSearchComponent } from './pages/cities-search/cities-search.component';
 import { SearchComponent } from './pages/search/search.component';
 import { WeatherService } from './services/weather.service';
+import { AboutComponent } from './pages/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { WeatherService } from './services/weather.service';
     WeatherCardComponent,
     CitiesSearchComponent,
     SearchComponent,
+    AboutComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [WeatherService],
